@@ -15,6 +15,7 @@ namespace SignalR.Controllers
             _ctx = ctx;
         }
 
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
