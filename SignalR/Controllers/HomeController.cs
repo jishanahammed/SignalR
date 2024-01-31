@@ -32,6 +32,7 @@ namespace SignalR.Controllers
                 if (await _context.SaveChangesAsync()>0)
                 {
                     await _hubContext.Clients.All.SendAsync("newCallReceived", model);
+                    ModelState.Clear();
                 }
 
 
